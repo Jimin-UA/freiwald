@@ -1,0 +1,705 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Ukaze von Freiwald</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f2ff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        #container {
+            width: 960px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid #c0c0c0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            padding: 20px;
+        }
+        #header {
+            background: #004287;
+            background: -webkit-linear-gradient(top, #004287, #002c5c);
+            background: -moz-linear-gradient(top, #004287, #002c5c);
+            background: linear-gradient(top, #004287, #002c5c);
+            color: #ffffff;
+            padding: 20px;
+            text-align: left;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #001f3e;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+        }
+        #header h1 {
+            margin: 0;
+            font-size: 36px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+        #flag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 120px;
+            height: auto;
+            border: 2px solid #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.5);
+        }
+        #menu {
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #c0c0c0;
+            margin-top: 10px;
+            border-radius: 5px;
+            padding: 5px 0;
+            display: flex;
+            justify-content: center;
+        }
+        #menu a {
+            text-decoration: none;
+            color: #004287;
+            padding: 10px 15px;
+            margin: 0 5px;
+            background-color: #e0e0e0;
+            border: 1px solid #c0c0c0;
+            border-radius: 5px;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px #ffffff;
+            transition: all 0.3s ease;
+        }
+        #menu a:hover {
+            background-color: #d0d0d0;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+        }
+        #content {
+            display: flex;
+            padding-top: 20px;
+            text-align: justify;
+        }
+        #sidebar {
+            flex-basis: 300px;
+            padding-right: 20px;
+            background-color: #f0f8ff;
+            border-right: 1px solid #c0c0c0;
+        }
+        #sidebar h3 {
+            color: #004287;
+            border-bottom: 2px solid #004287;
+            padding-bottom: 5px;
+            text-shadow: 1px 1px 1px #ffffff;
+            margin-top: 0;
+            text-align: left;
+        }
+        #sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #sidebar li {
+            margin-bottom: 5px;
+        }
+        #sidebar a {
+            display: block;
+            text-decoration: none;
+            color: #004287;
+            background-color: #e6e6e6;
+            padding: 8px 10px;
+            border: 1px solid #c0c0c0;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        #sidebar a:hover {
+            background-color: #d0d0d0;
+        }
+        #main-content {
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+        .ukaz {
+            display: none;
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+        }
+        .ukaz.active {
+            display: block;
+        }
+        .ukaz h2 {
+            color: #004287;
+            border-bottom: 2px solid #004287;
+            padding-bottom: 5px;
+            text-shadow: 1px 1px 1px #ffffff;
+            margin-top: 0;
+        }
+        .ukaz h3 {
+            color: #004287;
+        }
+        #search-box {
+            margin-bottom: 15px;
+        }
+        #search-box input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        #footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #004287;
+            color: #ffffff;
+            border-radius: 10px;
+            font-size: 12px;
+            border: 1px solid #001f3e;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <img src="Флаг.png" alt="Flagge von Freiwald" id="flag" />
+            <h1>Land Freiwald</h1>
+            <p>Das Land Freiwald liegt im Norden von Podwjasnowa.</p>
+        </div>
+        <div id="menu">
+            <a href="index.html">Startseite</a>
+            <a href="uber.html">Über uns</a>
+            <a href="leute.html">Leute</a>
+            <a href="regierung.html">Regierung</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
+        <div id="content">
+            <div id="sidebar">
+                <div id="search-box">
+                    <input type="text" id="search-input" placeholder="Nach Ukazen suchen...">
+                </div>
+                <h3>Ukaze von Landesherrn Michail I.</h3>
+                <ul id="landesherr-ukaze-liste"></ul>
+
+                <h3 style="margin-top: 20px;">Ukaze von Kanzler Emil von Lexendorf</h3>
+                <ul id="kanzler-ukaze-liste"></ul>
+            </div>
+            <div id="main-content"></div>
+        </div>
+        <div id="footer">
+            <p>&copy; 2008 - 2025 Land Freiwald. Alle Rechte sind geschützt.</p>
+        </div>
+    </div>
+
+    <script src="ukaze_data.js"></script>
+    <script>
+        function renderUkaze(containerId, ukazeList) {
+            var container = document.getElementById(containerId);
+            var mainContent = document.getElementById('main-content');
+            
+            ukazeList.forEach(function(ukaz) {
+                // Создаем ссылку в боковой панели
+                var li = document.createElement('li');
+                li.setAttribute('data-ukaz-id', ukaz.id);
+                var a = document.createElement('a');
+                a.href = '#';
+                a.textContent = ukaz.titel;
+                a.onclick = function() {
+                    showUkaz(ukaz.id);
+                };
+                li.appendChild(a);
+                container.appendChild(li);
+
+                // Создаем блок с текстом указа
+                var div = document.createElement('div');
+                div.id = ukaz.id;
+                div.className = 'ukaz';
+                var author = (containerId === 'landesherr-ukaze-liste') ? 'Von Landesherrn Michail I.' : 'Von Kanzler Emil von Lexendorf';
+                div.innerHTML = '<h2>' + ukaz.titel + '</h2>' +
+                                '<h3>' + author + '</h3>' +
+                                '<p>' + ukaz.text + '</p>';
+                mainContent.appendChild(div);
+            });
+        }
+        
+        function showUkaz(ukazId) {
+            var ukaze = document.getElementsByClassName('ukaz');
+            for (var i = 0; i < ukaze.length; i++) {
+                ukaze[i].classList.remove('active');
+            }
+            document.getElementById(ukazId).classList.add('active');
+        }
+
+        function filterUkaze() {
+            var input = document.getElementById('search-input');
+            var filter = input.value.toLowerCase();
+            
+            var allUkaze = document.querySelectorAll('#main-content .ukaz');
+            var allLinks = document.querySelectorAll('#sidebar a');
+
+            allUkaze.forEach(function(ukaz) {
+                var ukazText = ukaz.textContent || ukaz.innerText;
+                if (ukazText.toLowerCase().indexOf(filter) > -1) {
+                    ukaz.style.display = '';
+                } else {
+                    ukaz.style.display = 'none';
+                }
+            });
+
+            allLinks.forEach(function(link) {
+                var linkText = link.textContent || link.innerText;
+                var li = link.parentNode;
+                if (linkText.toLowerCase().indexOf(filter) > -1) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+
+            // Показываем первый найденный указ, если он есть
+            var firstFoundUkaz = document.querySelector('#main-content .ukaz[style="display: block;"]');
+            if (firstFoundUkaz) {
+                showUkaz(firstFoundUkaz.id);
+            } else {
+                // Если ничего не найдено, скрываем всё
+                var allActive = document.querySelectorAll('.ukaz.active');
+                allActive.forEach(function(el) {
+                    el.classList.remove('active');
+                });
+            }
+        }
+
+        document.getElementById('search-input').addEventListener('keyup', filterUkaze);
+
+        // Изначально рендерим все указы и показываем первый
+        renderUkaze('landesherr-ukaze-liste', ukazeData.landesherr);
+        renderUkaze('kanzler-ukaze-liste', ukazeData.kanzler);
+
+        if (ukazeData.landesherr.length > 0) {
+            showUkaz(ukazeData.landesherr[0].id);
+        } else if (ukazeData.kanzler.length > 0) {
+            showUkaz(ukazeData.kanzler[0].id);
+        }
+    </script>
+</body>
+</html><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Ukaze von Freiwald</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f2ff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        #container {
+            width: 960px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: 1px solid #c0c0c0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            padding: 20px;
+        }
+        #header {
+            background: #004287;
+            background: -webkit-linear-gradient(top, #004287, #002c5c);
+            background: -moz-linear-gradient(top, #004287, #002c5c);
+            background: linear-gradient(top, #004287, #002c5c);
+            color: #ffffff;
+            padding: 20px;
+            text-align: left;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #001f3e;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+        }
+        #header h1 {
+            margin: 0;
+            font-size: 36px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+        #flag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 120px;
+            height: auto;
+            border: 2px solid #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.5);
+        }
+        #menu {
+            background-color: #f0f0f0;
+            border-bottom: 1px solid #c0c0c0;
+            margin-top: 10px;
+            border-radius: 5px;
+            padding: 5px 0;
+            display: flex;
+            justify-content: center;
+        }
+        #menu a {
+            text-decoration: none;
+            color: #004287;
+            padding: 10px 15px;
+            margin: 0 5px;
+            background-color: #e0e0e0;
+            border: 1px solid #c0c0c0;
+            border-radius: 5px;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px #ffffff;
+            transition: all 0.3s ease;
+        }
+        #menu a:hover {
+            background-color: #d0d0d0;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+        }
+        #content {
+            display: flex;
+            padding-top: 20px;
+            text-align: justify;
+        }
+        #sidebar {
+            flex-basis: 300px;
+            padding-right: 20px;
+            background-color: #f0f8ff;
+            border-right: 1px solid #c0c0c0;
+        }
+        #sidebar h3 {
+            color: #004287;
+            border-bottom: 2px solid #004287;
+            padding-bottom: 5px;
+            text-shadow: 1px 1px 1px #ffffff;
+            margin-top: 0;
+            text-align: left;
+        }
+        #sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #sidebar li {
+            margin-bottom: 5px;
+        }
+        #sidebar a {
+            display: block;
+            text-decoration: none;
+            color: #004287;
+            background-color: #e6e6e6;
+            padding: 8px 10px;
+            border: 1px solid #c0c0c0;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        #sidebar a:hover {
+            background-color: #d0d0d0;
+        }
+        #main-content {
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+        .ukaz {
+            display: none;
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+        }
+        .ukaz.active {
+            display: block;
+        }
+        .ukaz h2 {
+            color: #004287;
+            border-bottom: 2px solid #004287;
+            padding-bottom: 5px;
+            text-shadow: 1px 1px 1px #ffffff;
+            margin-top: 0;
+        }
+        .ukaz h3 {
+            color: #004287;
+        }
+        #search-box {
+            margin-bottom: 15px;
+        }
+        #search-box input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        #footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #004287;
+            color: #ffffff;
+            border-radius: 10px;
+            font-size: 12px;
+            border: 1px solid #001f3e;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #admin-panel {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        #admin-panel h2, #admin-panel h3 {
+            color: #004287;
+        }
+        #admin-panel input, #admin-panel textarea, #admin-panel select, #admin-panel button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <img src="Флаг.png" alt="Flagge von Freiwald" id="flag" />
+            <h1>Land Freiwald</h1>
+            <p>Das Land Freiwald liegt im Norden von Podwjasnowa.</p>
+        </div>
+        <div id="menu">
+            <a href="index.html">Startseite</a>
+            <a href="uber.html">Über uns</a>
+            <a href="leute.html">Leute</a>
+            <a href="regierung.html">Regierung</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
+        <div id="content">
+            <div id="sidebar">
+                <div id="search-box">
+                    <input type="text" id="search-input" placeholder="Nach Ukazen suchen...">
+                </div>
+                <h3>Ukaze von Landesherrn Michail I.</h3>
+                <ul id="landesherr-ukaze-liste"></ul>
+
+                <h3 style="margin-top: 20px;">Ukaze von Kanzler Emil von Lexendorf</h3>
+                <ul id="kanzler-ukaze-liste"></ul>
+            </div>
+            <div id="main-content"></div>
+        </div>
+        <div id="admin-panel" style="display:none;">
+            <h2>Админ-панель</h2>
+            <input type="password" id="admin-password" placeholder="Введите пароль">
+            <button id="password-submit">Войти</button>
+        
+            <div id="ukaz-form" style="display:none;">
+                <h3>Добавить новый указ</h3>
+                <label for="ukaz-title">Заголовок:</label>
+                <input type="text" id="ukaz-title" required>
+                <br><br>
+                <label for="ukaz-text">Текст:</label>
+                <textarea id="ukaz-text" rows="10" required></textarea>
+                <br><br>
+                <label for="ukaz-author">Автор:</label>
+                <select id="ukaz-author">
+                    <option value="landesherr">Ландесхерр Михаиль I.</option>
+                    <option value="kanzler">Канцлер Эмиль фон Лексендорф</option>
+                </select>
+                <br><br>
+                <button id="save-ukaz">Сохранить</button>
+                <button id="export-ukaze">Экспортировать указы</button>
+            </div>
+        </div>
+        <div id="footer">
+            <p>&copy; 2008 - 2025 Land Freiwald. Alle Rechte sind geschщены.</p>
+            <button id="admin-button">Админ-меню</button>
+        </div>
+    </div>
+
+    <script src="ukaze_data.js"></script>
+    <script>
+        // Инициализируем данные, если они еще не существуют
+        if (typeof ukazeData === 'undefined') {
+            var ukazeData = {
+                landesherr: [],
+                kanzler: []
+            };
+        }
+        
+        function renderUkaze(containerId, ukazeList) {
+            var container = document.getElementById(containerId);
+            var mainContent = document.getElementById('main-content');
+            container.innerHTML = ''; // Очищаем список перед рендерингом
+            
+            ukazeList.forEach(function(ukaz) {
+                var li = document.createElement('li');
+                li.setAttribute('data-ukaz-id', ukaz.id);
+                var a = document.createElement('a');
+                a.href = '#';
+                a.textContent = ukaz.titel;
+                a.onclick = function() {
+                    showUkaz(ukaz.id);
+                };
+                li.appendChild(a);
+                container.appendChild(li);
+    
+                var div = document.createElement('div');
+                div.id = ukaz.id;
+                div.className = 'ukaz';
+                var author = (containerId === 'landesherr-ukaze-liste') ? 'Von Landesherrn Michail I.' : 'Von Kanzler Emil von Lexendorf';
+                div.innerHTML = '<h2>' + ukaz.titel + '</h2>' +
+                                '<h3>' + author + '</h3>' +
+                                '<p>' + ukaz.text + '</p>';
+                mainContent.appendChild(div);
+            });
+        }
+        
+        function showUkaz(ukazId) {
+            var ukaze = document.getElementsByClassName('ukaz');
+            for (var i = 0; i < ukaze.length; i++) {
+                ukaze[i].classList.remove('active');
+            }
+            document.getElementById(ukazId).classList.add('active');
+        }
+    
+        function filterUkaze() {
+            var input = document.getElementById('search-input');
+            var filter = input.value.toLowerCase();
+            
+            var allUkaze = document.querySelectorAll('#main-content .ukaz');
+            var allLinks = document.querySelectorAll('#sidebar a');
+    
+            allUkaze.forEach(function(ukaz) {
+                var ukazText = ukaz.textContent || ukaz.innerText;
+                if (ukazText.toLowerCase().indexOf(filter) > -1) {
+                    ukaz.style.display = 'block';
+                } else {
+                    ukaz.style.display = 'none';
+                }
+            });
+    
+            allLinks.forEach(function(link) {
+                var linkText = link.textContent || link.innerText;
+                var li = link.parentNode;
+                if (linkText.toLowerCase().indexOf(filter) > -1) {
+                    li.style.display = '';
+                } else {
+                    li.style.display = 'none';
+                }
+            });
+    
+            var firstFoundUkaz = document.querySelector('#main-content .ukaz[style="display: block;"]');
+            if (firstFoundUkaz) {
+                showUkaz(firstFoundUkaz.id);
+            } else {
+                var allActive = document.querySelectorAll('.ukaz.active');
+                allActive.forEach(function(el) {
+                    el.classList.remove('active');
+                });
+            }
+        }
+        document.getElementById('search-input').addEventListener('keyup', filterUkaze);
+    
+        // --- Логика админ-панели ---
+        const adminButton = document.getElementById('admin-button');
+        const adminPanel = document.getElementById('admin-panel');
+        const passwordInput = document.getElementById('admin-password');
+        const passwordSubmit = document.getElementById('password-submit');
+        const ukazForm = document.getElementById('ukaz-form');
+        const saveUkazBtn = document.getElementById('save-ukaz');
+        const exportUkazeBtn = document.getElementById('export-ukaze');
+        
+        // Показать/скрыть админ-панель
+        adminButton.addEventListener('click', () => {
+            adminPanel.style.display = (adminPanel.style.display === 'none') ? 'block' : 'none';
+        });
+    
+        // Проверка пароля
+        passwordSubmit.addEventListener('click', () => {
+            const password = passwordInput.value;
+            // Пароль: ukaz2025
+            if (password === 'ukaz2025') {
+                ukazForm.style.display = 'block';
+                passwordInput.style.display = 'none';
+                passwordSubmit.style.display = 'none';
+            } else {
+                alert('Неверный пароль!');
+            }
+        });
+    
+        // Сохранение нового указа
+        saveUkazBtn.addEventListener('click', () => {
+            const title = document.getElementById('ukaz-title').value;
+            const text = document.getElementById('ukaz-text').value;
+            const author = document.getElementById('ukaz-author').value;
+    
+            if (!title || !text) {
+                alert('Пожалуйста, заполните все поля.');
+                return;
+            }
+    
+            const newUkaz = {
+                id: 'ukaz-' + Date.now(), // Уникальный ID на основе времени
+                titel: title,
+                text: text
+            };
+    
+            if (author === 'landesherr') {
+                ukazeData.landesherr.push(newUkaz);
+            } else {
+                ukazeData.kanzler.push(newUkaz);
+            }
+            
+            // Очистка формы
+            document.getElementById('ukaz-title').value = '';
+            document.getElementById('ukaz-text').value = '';
+            
+            // Перерисовываем список указов
+            renderAllUkaze();
+            alert('Указ успешно добавлен! Нажмите "Экспортировать указы", чтобы сохранить изменения в файле.');
+        });
+    
+        // Экспорт данных в файл
+        exportUkazeBtn.addEventListener('click', () => {
+            const dataStr = 'const ukazeData = ' + JSON.stringify(ukazeData, null, 4) + ';';
+            const blob = new Blob([dataStr], { type: 'text/javascript' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'ukaze_data.js';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            alert('Файл ukaze_data.js был экспортирован. Замените им старый файл на сервере.');
+        });
+    
+        function renderAllUkaze() {
+            document.getElementById('main-content').innerHTML = ''; // Очищаем основной контент
+            renderUkaze('landesherr-ukaze-liste', ukazeData.landesherr);
+            renderUkaze('kanzler-ukaze-liste', ukazeData.kanzler);
+    
+            if (ukazeData.landesherr.length > 0) {
+                showUkaz(ukazeData.landesherr[0].id);
+            } else if (ukazeData.kanzler.length > 0) {
+                showUkaz(ukazeData.kanzler[0].id);
+            }
+        }
+    
+        // Изначально рендерим все указы и показываем первый
+        renderAllUkaze();
+    </script>
+</body>
+</html>
